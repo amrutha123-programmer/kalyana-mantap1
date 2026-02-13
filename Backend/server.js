@@ -24,6 +24,9 @@ const pool = new Pool({
 pool.connect()
   .then(() => console.log("PostgreSQL Connected"))
   .catch(err => console.error("Connection error", err.stack));
+pool.on('error', (err) => {
+  console.error('Unexpected Postgres error', err);
+});
 
 // ================= ROOT ROUTE =================
 app.get("/", (req, res) => {
