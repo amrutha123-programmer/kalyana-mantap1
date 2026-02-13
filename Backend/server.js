@@ -18,14 +18,17 @@ const JWT_SECRET = process.env.JWT_SECRET || "SECRET_KEY";
 // ===== PostgreSQL Connection =====
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  ssl: process.env.DATABASE_URL
+    ? { rejectUnauthorized: false }
+    : false
 });
 
-pool.connect()
-  .then(() => console.log("PostgreSQL Connected"))
-  .catch(err => console.error("Connection error", err.stack));
+// Connect only if DATABASE_URL exists
+if (process.env.DATABASE_URL) {
+  pool.connect()
+    .then(() => console.log("PostgreSQL Connected"))
+    .catch(err => console.error("Connection error", err.stack));
+}
 
 // ================= ROOT ROUTE =================
 app.get("/", (req, res) => {
