@@ -1,0 +1,504 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================
+   THEME COLORS
+   ===================== */
+:root {
+  --primary: #8b1e3f;   /* Maroon */
+  --secondary: #f3d9b1; /* Gold */
+  --dark: #1c1c1c;
+}
+
+/* =====================
+   HERO SECTION
+   ===================== */
+   
+ /* Logo size */
+.navbar-logo {
+  height: 70px;
+  width: auto;
+}
+
+/* ===== AUTH PAGE BACKGROUND ===== */
+.landing-container {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../assets/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Text styling */
+.navbar-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Keep navbar neat */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.hero-section {
+  min-height: 70vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../assets/images/mantapa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("../images/mandap-bg.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.hero-section h1 {
+  color: var(--secondary);
+}
+
+.hero-section .btn {
+  background-color: var(--primary);
+  border: none;
+}
+
+.hero-section .btn:hover {
+  background-color: #6f172f;
+}
+
+/* =====================
+   CARDS
+   ===================== */
+.card {
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+  background-color: var(--dark);
+  font-size: 14px;
+}
+
+
+/* =======================
+   GOOGLE FONT
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background:#fffaf7;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar{
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-brand{
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.nav-link{
+  position:relative;
+  margin:0 10px;
+  transition:0.3s ease;
+}
+
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0%;
+  height:2px;
+  background:#ffc107;
+  transition:0.4s;
+}
+
+.nav-link:hover::after{
+  width:100%;
+}
+
+.nav-link:hover{
+  color:#ffc107 !important;
+}
+
+/* =======================
+   HERO SECTION
+======================= */
+.hero-section{
+  min-height:85vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e") center/cover no-repeat;
+  color:#fff;
+  animation:fadeIn 1.5s ease-in;
+}
+
+.hero-section h1{
+  animation:slideDown 1s ease-out;
+}
+
+.hero-section p{
+  animation:slideUp 1.3s ease-out;
+}
+
+.hero-section .btn{
+  background:linear-gradient(45deg,#d4af37,#f5d76e);
+  border:none;
+  color:#000;
+  font-weight:600;
+  padding:12px 30px;
+  transition:0.4s;
+  box-shadow:0 10px 30px rgba(212,175,55,0.5);
+}
+
+.hero-section .btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 40px rgba(212,175,55,0.8);
+}
+
+/* =======================
+   CARDS
+======================= */
+.card{
+  border:none;
+  border-radius:15px;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transition:0.5s;
+  overflow:hidden;
+  position:relative;
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,#f5d76e,transparent);
+  transition:0.6s;
+}
+
+.card:hover::before{
+  left:100%;
+}
+
+.card:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:0 25px 60px rgba(212,175,55,0.5);
+}
+
+.card-title{
+  font-weight:700;
+  color:#b8860b;
+}
+
+.card-text{
+  color:#555;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer{
+  background:linear-gradient(45deg,#111,#333);
+  letter-spacing:1px;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes slideDown{
+  from{transform:translateY(-50px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+
+@keyframes slideUp{
+  from{transform:translateY(50px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+
+/* =======================
+   MOBILE RESPONSIVE
+======================= */
+@media(max-width:768px){
+  .hero-section h1{
+    font-size:2rem;
+  }
+
+  .hero-section p{
+    font-size:1rem;
+  }
+
+  .navbar-nav{
+    text-align:center;
+    margin-top:15px;
+  }
+
+  .nav-link{
+    padding:10px 0;
+  }
+}
+
+/* Force hero text clarity */
+.hero-section h1,
+.hero-section p{
+  color:#fff !important;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+}
+
+/* Add better dark overlay */
+.hero-section{
+  position:relative;
+}
+
+.hero-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:0;
+}
+
+.hero-section .container{
+  position:relative;
+  z-index:1;
+}
+/* Landing Background */
+.landing-container {
+  min-height: 100vh;
+  background: url("../assets/images/bg.jpeg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Center Box */
+.landing-content,
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Headings */
+.landing-content h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.landing-content p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Auth Card */
+.auth-card h4 {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.auth-card input {
+  height: 45px;
+}
+
+/* Buttons */
+.btn {
+  height: 45px;
+  font-size: 16px;
+}
+
+/* Links */
+.auth-link {
+  margin-top: 15px;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 576px) {
+  .landing-content h1 {
+    font-size: 24px;
+  }
+
+  .landing-content p {
+    font-size: 14px;
+  }
+
+  .landing-content,
+  .auth-card {
+    padding: 25px;
+  }
+}
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 28px;
+  }
+}
+/* HERO SECTION */
+.hero-section {
+  min-height: 70vh;
+  background: url("assets/images/bg.jepg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+}
+/* ABOUT PAGE HEADER */
+.about-header {
+  background: #343a40;
+  color: white;
+  padding: 60px 20px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .about-header h1 {
+    font-size: 26px;
+  }
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  height: 42px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .navbar-logo {
+    height: 34px;
+  }
+
+  .navbar-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .navbar-title {
+    display: none;
+  }
+}
+
+.navbar-brand {
+  cursor: default;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="landing-container">
+        <div class="auth-card">
+            <h4>Admin Login</h4>
+            <p class="text-muted small mb-3">Authorized personnel only</p>
+
+            <form onsubmit="adminLogin(event)">
+                <input type="text" class="form-control mb-3" id="adminUsername" placeholder="Username" required>
+                <input type="password" class="form-control mb-3" id="adminPassword" placeholder="Password" required>
+
+                <button type="submit" class="btn btn-dark w-100">Login as Admin</button>
+            </form>
+
+            <div class="auth-link">
+                <a href="../frontend/login.html">← Back to User Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function adminLogin(e) {
+            e.preventDefault();
+
+            const username = document.getElementById("adminUsername").value;
+            const password = document.getElementById("adminPassword").value;
+
+            // Hardcoded admin credentials
+            const ADMIN_USERNAME = "admin";
+            const ADMIN_PASSWORD = "admin123";
+
+            if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+                alert("✅ Admin login successful!");
+                window.location = "dashboard.html";
+            } else {
+                alert("❌ Invalid admin credentials!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
